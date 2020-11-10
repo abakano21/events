@@ -13,7 +13,7 @@ class CommentEvents extends Migration
      */
     public function up()
     {
-        Schema::create('comment_events', function (Blueprint $table) {
+        Schema::create('comment_event', function (Blueprint $table) {
             $table->bigIncrements('id');
             
             $table->unsignedBigInteger('comment_id');
@@ -34,6 +34,6 @@ class CommentEvents extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment_events');
+        Schema::dropIfExists('comment_event');
     }
 }
